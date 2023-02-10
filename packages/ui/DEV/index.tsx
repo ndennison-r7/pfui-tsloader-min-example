@@ -4,6 +4,8 @@ import {Button} from '../Button'
 
 const content: string = 'root'
 
+console.info('render ui package dev')
+
 const node = document.getElementById(content);
 
-ReactDOM.render(<Button />, node);
+ReactDOM.render(<Button/>, node);
