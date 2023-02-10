@@ -8,9 +8,11 @@
   ],
   "scripts": {
     "build": "turbo run build",
+    "dev:bar": "turbo run dev --filter=bar-app",
+    "dev:ui": "turbo run dev --filter=ui",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
     "eslint-config-custom": "*",
