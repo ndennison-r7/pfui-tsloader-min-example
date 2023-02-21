@@ -13,13 +13,13 @@ let cancel: Canceler | undefined;
 
 let instance = axios.create();
 
-const cancelableRequest = <T>(method: AxiosRequestMethods, url: string) => {
+const cancelableRequest = (method: AxiosRequestMethods, url: string) => {
   if (cancel !== undefined) {
     cancel();
     cancel = undefined;
   }
 
-  return instance[method]<T>(url, {
+  return instance[method](url, {
     cancelToken: new axios.CancelToken((cancelToken) => (cancel = cancelToken)),
   });
 };
